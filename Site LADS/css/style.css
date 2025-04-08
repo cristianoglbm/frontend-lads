@@ -19,8 +19,27 @@ header {
 }
 header h1 {
     margin: 0;
+    display: flex;
+    align-items: center;
+    margin-left: -500px;
+    max-width: calc(100% - 20px);
+    overflow-x: hidden;
     font-size: 24px;
     color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s forwards;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header h1:hover {
+    transform: translateY(-10px);
+    color: #0078d7;
+}
+
+header h1:active {
+    transform: translateY(0);
+    color: #005bb5;
 }
 header .logo {
     height: 50px;
@@ -202,8 +221,9 @@ img {
 .footer {
     background-color: #000000;
     color: #fff;
-    padding: 20px 0;
+    padding: 0px 0;
     text-align: center;
+    max-height: 5px;
 }
 #Nmembros {
     margin-top: 0;
